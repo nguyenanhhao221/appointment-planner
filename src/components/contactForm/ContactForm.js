@@ -23,18 +23,17 @@ export const ContactForm = ({
       </label>
       <label>
         <input
-          placeholder="Contact Phone"
+          placeholder="Contact Phone (###-###-####)"
           type='tel'
           value={phone}
           required
-          // pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
+          pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
           onChange={e => { setPhone(e.target.value) }}></input>
       </label>
       <label>
         <input
           placeholder="Contact Email"
-          type='email
-          '
+          type='email'
           value={email}
           required
           onChange={e => { setEmail(e.target.value) }}></input>
