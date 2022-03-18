@@ -29,21 +29,21 @@ export const ContactsPage = ({ contacts, addContact }) => {
   Using hooks, check for contact name in the 
   contacts array variable in props
   */
-  // useEffect(() => {
-  //   const nameIsDuplicate = () => {
-  //     const found = contacts.find((contact) => contact.name === name);
-  //     if (found !== undefined) {
-  //       return true;
-  //     }
-  //     return false;
-  //   };
+  useEffect(() => {
+    const nameIsDuplicate = () => {
+      const found = contacts.find((contact) => contact.name === name);
+      if (found !== undefined) {
+        return true;
+      }
+      return false;
+    };
 
-  //   if (nameIsDuplicate()) {
-  //     setDuplicate(true);
-  //   } else {
-  //     setDuplicate(false);
-  //   }
-  // }, [name, contacts, duplicate]);
+    if (nameIsDuplicate()) {
+      setDuplicate(true);
+    } else {
+      setDuplicate(false);
+    }
+  }, [name, contacts, duplicate]);
 
   return (
     <div>
