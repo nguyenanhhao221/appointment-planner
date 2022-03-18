@@ -22,7 +22,7 @@ export const AppointmentsPage = ({ contacts, appointments, addAppointment }) => 
       setTitle('');
       setDate('');
       setTime('');
-      setContact('No Contact Selected');
+      setContact('');
     }
   };
   /*Using hooks, checks for date and time in the appointments array*/

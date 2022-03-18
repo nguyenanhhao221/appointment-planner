@@ -1,16 +1,16 @@
 import React from "react";
 
-export const ContactPicker = ({ contacts, name, setContact }) => {
+export const ContactPicker = ({ contacts, name, setContact, value }) => {
   return (
     <select
       name={name}
       id="appointments"
       required
       onChange={e => { setContact(e.target.value) }}
-      defaultValue={
-        'No Contact Selected'
-      }>
-      <option value="No Contact Selected"key={-1} disabled>
+      value={value}
+      form="appointments"
+    >
+      <option value="" key={-1} disabled hidden>
         No Contact Selected
       </option>
       {
