@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <>
+    <Router>
       <nav>
         <NavLink to={ROUTES.CONTACTS} activeClassName="active">
           Contacts
@@ -67,7 +67,7 @@ function App() {
           </Route>
         </Switch>
       </main>
-    </>
+    </Router>
   );
 }
 
