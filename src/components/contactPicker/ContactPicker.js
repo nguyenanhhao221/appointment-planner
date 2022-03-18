@@ -7,7 +7,7 @@ export const ContactPicker = ({ contacts, name, setContact }) => {
       id="appointments"
       required
       onChange={e => { setContact(e.target.value) }}
-      value={
+      defaultValue={
         'No Contact Selected'
       }>
       <option value="No Contact Selected"key={-1} disabled>
