@@ -3,9 +3,9 @@ import React from "react";
 export const Tile = ({ tile }) => {
   return (
     <div className="tile-container">
-      <p className="tile-title tile">{tile.name}</p>
-      <p className="tile">{tile.phone}</p>
-      <p className="tile">{tile.email}</p>
+      {
+        Object.values(tile).map((value, index) => <p className={`${index === 0 ? "tile-title tile" : "tile"}`} key={index}>{value}</p>)
+      }
     </div>
   );
 };
